@@ -1,9 +1,8 @@
 # Pull tomcat latest image from dockerhub 
-From php:8.1.14-apache 
-
+From tomcat:latest
 
 # Maintainer
-MAINTAINER "Jayati Nandy" 
+MAINTAINER "Jayati" 
 
 # copy war file on to container 
-COPY ./var/www/php 
+COPY ./webapp.war /usr/local/tomcat/webapps
