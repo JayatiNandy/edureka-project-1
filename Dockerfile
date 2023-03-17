@@ -1,8 +1,7 @@
-# Pull tomcat latest image from dockerhub 
-From tomcat:latest
+FROM devopsedu/webapp
 
-# Maintainer
-MAINTAINER "Jayati" 
+ADD website /var/www/html
 
-# copy war file on to container 
-COPY ./webapp.war /usr/local/tomcat/webapps
+RUN rm /var/www/html/index.html
+
+CMD apachectl -D FOREGROUND
